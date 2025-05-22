@@ -1,8 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Globe } from "lucide-react";
-import StatsCard from './components/StatsCard'
-import IndicesSection from './components/CarouselCard'
+import StatsCard from './components/StatsCard/StatsCard'
+import IndicesSection from './components/CarouselCard/CarouselCard'
 import background from './assets/background.svg';
 import logo from './assets/ICM-logo-fsa 1.svg';
 import FAQImage from './assets/9c565f5b97a3d044ba78bc3bf2e7b6b9f0ba1828.jpg'
@@ -14,7 +14,7 @@ import DepositBonusForm from './components/DepositBonusForm/DepositBonusForm';
 import TradeIndexFaqs from './components/FAQs/FAQs';
 import TrustedBrokerSupport from './components/TrustedBrokerSupport/TrustedBrokerSupport';
 import ICMarketsFooter from './components/ICMarketsFooter/ICMarketsFooter';
-import ICMSupport from './components/Support';
+import ICMSupport from './components/Support/Support';
 import { stats,accounts} from './Constants'
 
 
