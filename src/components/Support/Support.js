@@ -1,5 +1,5 @@
 import React from "react";
-import "./TrustedBrokerSupport/TrustedBrokerSupport.css";
+import "../TrustedBrokerSupport/TrustedBrokerSupport.css";
 import { FaPhoneAlt, FaEnvelope, FaComments } from "react-icons/fa";
 
 
