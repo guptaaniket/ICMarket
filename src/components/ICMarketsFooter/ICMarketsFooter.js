@@ -1,4 +1,3 @@
-// ICMarketsFooter.jsx
 import React from 'react';
 import './ICMarketsFooter.css';
 import * as Icons from '../../assets'

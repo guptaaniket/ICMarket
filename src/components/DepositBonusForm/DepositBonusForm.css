@@ -27,7 +27,7 @@ h1 {
 .bonus-form select {
   padding: 0.75rem;
   border-radius: 5px;
-  border: 1px solid #d3d3d3;
+  border: 1px solid var(--grey-border);
   font-size: 1rem;
   width: 100%;
 }

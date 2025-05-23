@@ -68,10 +68,10 @@
 
 .support-card {
   display: flex;
-  align-items: flex-start;
   gap: 1rem;
   max-width: 300px;
-  min-width: 300px;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .green-icon {
@@ -104,11 +104,17 @@
   margin-top: 0.2rem;
 }
 
-/* Swiper buttons customization */
 .swiper-button-prev,
 .swiper-button-next {
   color: var(--green);
   font-weight: bold;
+}
+
+.review-verified {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--grey-border);
+  margin-left: 2px
 }
 
 @media (max-width: 900px) {
@@ -118,7 +124,7 @@
 
   .support-card {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
   }
 
@@ -127,13 +133,13 @@
     flex-wrap: wrap;
   }
 
-   .support-methods {
+  .support-methods {
     gap: 1.5rem;
     flex-wrap: wrap;
   }
 }
-.trusted-broker-support {
-}
+
+.trusted-broker-support {}
 
 /* Trusted Broker Section */
 .trusted-broker-section {
@@ -220,36 +226,6 @@
   gap: 2rem;
 }
 
-.support-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  max-width: 300px;
-  text-align: left;
-}
-
-.support-icon {
-  font-size: 1.5rem;
-  color: var(--green);
-}
-
-.support-label {
-  font-weight: bold;
-  color: var(--green);
-}
-
-.support-link {
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.support-note {
-  font-size: 0.8rem;
-  color: #888;
-}
-
-/* Arrows */
 .arrow {
   display: block;
   z-index: 1;

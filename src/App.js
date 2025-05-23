@@ -5,36 +5,12 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CiGlobe } from "react-icons/ci";
 import * as Icons from './assets'
-import {
-  StatsCard,
-  IndicesSection,
-  DepositBonusForm,
-  TradeIndexFaqs,
-  TrustedBrokerSupport,
-  ICMarketsFooter,
-  ICMSupport,
-  TradeIndices
-} from './components'
-import { stats, accounts } from './utils/Constants'
+import { StatsCard, IndicesSection, DepositBonusForm, TradeIndexFaqs, TrustedBrokerSupport, ICMarketsFooter, ICMSupport, TradeIndices } from './components'
+import { stats, accounts, platforms } from './utils/Constants'
 
 
 function App() {
   const textRef = useRef(null);
-
-  const platforms = [
-    {
-      alt: "MetaTrader 5",
-      src: Icons.IconOne
-    },
-    {
-      alt: "cTrader",
-      src: Icons.IconTwo
-    },
-    {
-      alt: "TradingView",
-      src: Icons.IconThree
-    }
-  ];
 
   useEffect(() => {
     const el = textRef.current;

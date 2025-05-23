@@ -1,21 +1,21 @@
 import React from "react";
 import Slider from "react-slick";
-import { FaRegArrowAltCircleLeft, FaRegArrowAltCircleRight, FaCheckCircle } from "react-icons/fa";
+import { IoIosArrowDropleft,IoIosArrowDropright,IoIosCheckmarkCircle } from "react-icons/io";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./TrustedBrokerSupport.css"; 
-import {reviews} from '../../utils/Constants'
+import "./TrustedBrokerSupport.css";
+import { reviews } from '../../utils/Constants'
 
 
 const ArrowLeft = (props) => (
   <div {...props} className="arrow arrow-left">
-    <FaRegArrowAltCircleLeft size={24} color="#d3d3d3" />
+    <IoIosArrowDropleft size={24} color="var(--grey-border)" />
   </div>
 );
 
 const ArrowRight = (props) => (
   <div {...props} className="arrow arrow-right">
-    <FaRegArrowAltCircleRight size={24} color="#d3d3d3" />
+    <IoIosArrowDropright size={24} color="var(--grey-border)" />
   </div>
 );
 
@@ -41,7 +41,9 @@ const ReviewSlider = () => {
         <div key={idx} className="review-card">
           <div className="d-flex align-center gap-2">
             <div className="review-stars">★★★★★</div>
-            <div><FaCheckCircle size={18} color="#d3d3d3" /><span style={{ fontSize: '12px', fontWeight: "700", color: '#d3d3d3', marginLeft: '2px' }}>Verified</span></div>
+            <div><IoIosCheckmarkCircle size={18} color="var(--grey-border)" />
+              <span className="review-verified">Verified</span>
+            </div>
           </div>
 
           <h4 className="mt-2">{rev.title}</h4>
@@ -56,8 +58,6 @@ const ReviewSlider = () => {
 const TrustedBrokerSection = () => (
   <div className="trusted-broker-section">
     <div className="trusted-broker-content">
-
-
       <div className="trustpilot-info">
         <h4>Excellent</h4>
         <div className="review-stars">★★★★★</div>

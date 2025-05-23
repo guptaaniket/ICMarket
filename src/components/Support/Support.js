@@ -1,32 +1,12 @@
 import React from "react";
 import "../TrustedBrokerSupport/TrustedBrokerSupport.css";
-import { FaPhoneAlt, FaEnvelope, FaComments } from "react-icons/fa";
+import { supportOptions} from '../../utils/Constants'
 
-
-const supportOptions = [
-  {
-    icon: <FaPhoneAlt />,
-    label: "Call us",
-    value: "+248 467 19 76",
-    note: "(International charges may apply)"
-  },
-  {
-    icon: <FaEnvelope />,
-    label: "Email us",
-    value: "support@icmarkets.com"
-  },
-  {
-    icon: <FaComments />,
-    label: "Live Chat",
-    value: "Chat to support"
-  }
-];
 
 const TrustedBrokerSupport = () => {
   return (
     
-      <div className="mb-5 mt-5">
-        
+      <div className="mb-5 mt-5">       
         <div className="support-methods">
           {supportOptions.map((opt, idx) => (
             <div className="support-card" key={idx}>
