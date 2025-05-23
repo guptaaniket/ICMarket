@@ -4,7 +4,7 @@ import { FaRegArrowAltCircleLeft, FaRegArrowAltCircleRight, FaCheckCircle } from
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./TrustedBrokerSupport.css"; 
-import {reviews} from '../../Constants'
+import {reviews} from '../../utils/Constants'
 
 
 const ArrowLeft = (props) => (

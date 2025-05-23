@@ -3,18 +3,19 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Globe } from "lucide-react";
-import StatsCard from './components/StatsCard/StatsCard'
-import IndicesSection from './components/CarouselCard/CarouselCard'
+import { CiGlobe } from "react-icons/ci";
 import * as Icons from './assets'
-import DepositBonusForm from './components/DepositBonusForm/DepositBonusForm';
-import TradeIndexFaqs from './components/FAQs/FAQs';
-import TrustedBrokerSupport from './components/TrustedBrokerSupport/TrustedBrokerSupport';
-import ICMarketsFooter from './components/ICMarketsFooter/ICMarketsFooter';
-import ICMSupport from './components/Support/Support';
-import TradeIndices from './components/TradeIndices/TradeIndices'
-
-import { stats,accounts} from './Constants'
+import {
+  StatsCard,
+  IndicesSection,
+  DepositBonusForm,
+  TradeIndexFaqs,
+  TrustedBrokerSupport,
+  ICMarketsFooter,
+  ICMSupport,
+  TradeIndices
+} from './components'
+import { stats, accounts } from './utils/Constants'
 
 
 function App() {
@@ -40,7 +41,6 @@ function App() {
     const text = el.innerText;
     el.innerText = '';
 
-    // Split text into spans
     text.split('').forEach((char, i) => {
       const span = document.createElement('span');
       span.innerText = char;
@@ -60,14 +60,14 @@ function App() {
   return (
     <div className="">
       <div className='hero' >
-        <section className='back-img' style={{'--bg-image': `url(${Icons.background})`}}>
+        <section className='header-background-image' style={{ '--bg-image': `url(${Icons.background})` }}>
           <header className="hero-header">
             <div className="hero-logo">
               <img style={{ width: '228px', height: '29px' }} alt='app-logo' src={Icons.logo} />
             </div>
             <div className="hero-controls">
               <div className="hero-lang">
-                <Globe size={16} />
+                <CiGlobe size={16} />
                 <span>EN</span>
               </div>
               <button className="hero-button">Start Trading</button>
@@ -134,7 +134,6 @@ function App() {
               ))}
             </div>
           </div>
-
         </section>
         <section className="why-trade-section-white" >
           <div className="why-trade-container" >
@@ -148,7 +147,7 @@ function App() {
           </div>
 
         </section>
-        <section className="why-trade-section faq-img"  style={{'--faq-image': `url(${Icons.FAQImage})`}}>
+        <section className="why-trade-section faq-img" style={{ '--faq-image': `url(${Icons.FAQImage})` }}>
           <div className="why-trade-container pt-5">
 
             <h2 className="section-heading">Get a 10% Deposit Bonus – Limited Time Only*</h2>
@@ -159,7 +158,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="vision-shadow pt-5">
+        <section className="vision-shadow pt-5 pb-2">
           <div className="why-trade-container">
             <h2 className='faq-title'>Trade Index FAQs</h2>
             <p className='faq-message mt-5'>Open a new account and claim your 10% deposit bonus today. This exclusive offer is available to new users who deposit by 31 July 2025. It’s simple: sign up, fund your account, and we’ll boost your balance with a non-withdrawable 10% bonus. Start stronger—trade with more.</p>

@@ -1,7 +1,7 @@
 // TradeIndexFaqs.jsx
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'react-bootstrap-icons';
-import { faqs } from '../../Constants'
+import { faqs } from '../../utils/Constants'
 import './FAQs.css'
 const TradeIndexFaqs = () => {
   const [openIndex, setOpenIndex] = useState(null);

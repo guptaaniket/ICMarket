@@ -190,7 +190,7 @@ body {
 
 }
 
-.back-img {
+.header-background-image {
   filter: contrast(1.15) brightness(1.2);
   background: radial-gradient(circle at 75% 80%, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0) 20%,
       rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.85) 65%, rgba(0, 0, 0, 1) 100%), var(--bg-image),
@@ -391,13 +391,19 @@ select {
   border: 1px solid white;
 }
 
+.support-container {
+  padding: 3rem 15rem;
+  justify-self: center;
+  background-color: #F6F6F6
+}
+
 @media (max-width: 900px) {
   .why-trade-card-custom {
     flex: 1 1 100%;
     max-width: 100%;
   }
 
-  .back-img,
+  .header-background-image,
   .why-trade-container-custom {
     padding: 0 2rem;
   }
@@ -509,7 +515,7 @@ select {
     text-align: unset;
   }
 
-  .back-img,
+  .header-background-image,
   .why-trade-container-custom {
     padding: 0 1rem;
   }
@@ -524,7 +530,7 @@ ul.no-bullets {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
 
   .vision-shadow,
-  .back-img,
+  .header-background-image,
   .why-trade-container {
     padding: 2rem;
   }
