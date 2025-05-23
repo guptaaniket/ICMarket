@@ -7,7 +7,8 @@
 .faq-wrapper {
   width: 100%;
   color: var(--white);
-  margin: 0 auto;
+  margin-bottom: 3rem;
+
 }
 
 .questions {
@@ -16,6 +17,7 @@
   border-radius: 10px;
   margin-bottom: 1rem;
   overflow: hidden;
+  gap: 10px;
 
 }
 
@@ -24,12 +26,18 @@
   padding: 1rem;
   background: var(--white);
   border: 1px solid #d3d3d3;
-  display: flex;
   justify-content: space-between;
+
+  display: flex;
   align-items: center;
-  font-weight: bold;
   font-size: 1rem;
-  cursor: pointer
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
 }
 
 .faq-heading {
@@ -56,12 +64,17 @@
 
 
 .faq-answer {
-  background-color: #f8f9fa;
+  background-color: rgba(255, 255, 255, 1);
   margin: 0;
-  font-size: 0.95rem;
   line-height: 1.5;
   text-align: left;
-  padding: 1rem
+  padding: 1rem;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: rgba(31, 31, 31, 0.6667);
+
 }
 
 @media (max-width: 900px) {

@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { FaRegArrowAltCircleLeft, FaRegArrowAltCircleRight, FaCheckCircle } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./TrustedBrokerSupport.css"; // 👈 Import the stylesheet
+import "./TrustedBrokerSupport.css"; 
 import {reviews} from '../../Constants'
 
 

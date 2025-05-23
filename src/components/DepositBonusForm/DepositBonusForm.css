@@ -1,6 +1,8 @@
 .discount-form {
   margin: 0;
   color: var(--white);
+  display: flex;
+  justify-content: center;
 }
 
 .form-wrapper {
@@ -8,6 +10,7 @@
   margin: 2rem auto;
   padding: 1.5rem;
   border-radius: 10px;
+
 }
 
 h1 {

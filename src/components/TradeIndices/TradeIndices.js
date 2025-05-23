@@ -1,36 +1,30 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './TradeIndices.css';
-import Trader from '../../assets/ctrader.svg'
-import Discount from '../../assets/Discount.svg'
-import Group1 from '../../assets/Group 1000001697.svg'
-import Group2 from '../../assets/Group1000001696.svg'
-import MoneyBag from '../../assets/MoneyBag.svg'
-
-
+import * as Icons from '../../assets'
 
 const cardData = [
   {
-    icon: Group1,
+    icon: Icons.Group1,
     title: 'Explore Major Indices',
     description: 'Access over 20 Indices, including the US30 and UK100, so you can invest in top companies through a single instrument.'
   },
   {
-    icon:Trader ,
+    icon:Icons.Trader ,
     title: 'Industry Leading Conditions',
     description: 'We’re the top choice for Index traders, offering spreads from 0.0 pips and deep liquidity for seamless trading.'
   },
   {
-    icon: Discount,
+    icon: Icons.Discount,
     title: 'Competitive Pricing',
     description: 'We offer competitive CFD pricing, including commission-free options, to help your investment go further.'
   },
   {
-    icon: Group2,
+    icon: Icons.Group2,
     title: 'User-Friendly Platform',
     description: 'Trade Indices on MetaTrader 5 and TradingView allowing you to trade on the world’s biggest investment platform.'
   },
   {
-    icon: MoneyBag,
+    icon: Icons.MoneyBag,
     title: 'Small Funding for Big Opportunities',
     description: 'Begin your Index trading journey with a low initial investment, so you can diversify your portfolio.'
   }

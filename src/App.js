@@ -1,47 +1,69 @@
+
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Globe } from "lucide-react";
 import StatsCard from './components/StatsCard/StatsCard'
 import IndicesSection from './components/CarouselCard/CarouselCard'
-import background from './assets/background.svg';
-import logo from './assets/ICM-logo-fsa 1.svg';
-import FAQImage from './assets/9c565f5b97a3d044ba78bc3bf2e7b6b9f0ba1828.jpg'
-import TradeIndices from './components/TradeIndices/TradeIndices'
-import IconOne from './assets/image 1.svg'
-import IconTwo from './assets/image 2.svg'
-import IconThree from './assets/image 3.svg'
+import * as Icons from './assets'
 import DepositBonusForm from './components/DepositBonusForm/DepositBonusForm';
 import TradeIndexFaqs from './components/FAQs/FAQs';
 import TrustedBrokerSupport from './components/TrustedBrokerSupport/TrustedBrokerSupport';
 import ICMarketsFooter from './components/ICMarketsFooter/ICMarketsFooter';
 import ICMSupport from './components/Support/Support';
+import TradeIndices from './components/TradeIndices/TradeIndices'
+
 import { stats,accounts} from './Constants'
 
 
 function App() {
+  const textRef = useRef(null);
 
   const platforms = [
     {
       alt: "MetaTrader 5",
-      src: IconOne
+      src: Icons.IconOne
     },
     {
       alt: "cTrader",
-      src: IconTwo
+      src: Icons.IconTwo
     },
     {
       alt: "TradingView",
-      src: IconThree
+      src: Icons.IconThree
     }
   ];
+
+  useEffect(() => {
+    const el = textRef.current;
+    const text = el.innerText;
+    el.innerText = '';
+
+    // Split text into spans
+    text.split('').forEach((char, i) => {
+      const span = document.createElement('span');
+      span.innerText = char;
+      el.appendChild(span);
+    });
+
+    const spans = el.querySelectorAll('span');
+    gsap.from(spans, {
+      opacity: 0,
+      y: 20,
+      stagger: 0.05,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+  }, []);
 
   return (
     <div className="">
       <div className='hero' >
-        <div className='back-img' style={{'--bg-image': `url(${background})`}}>
+        <section className='back-img' style={{'--bg-image': `url(${Icons.background})`}}>
           <header className="hero-header">
             <div className="hero-logo">
-              <img style={{ width: '228px', height: '29px' }} alt='app-logo' src={logo} />
+              <img style={{ width: '228px', height: '29px' }} alt='app-logo' src={Icons.logo} />
             </div>
             <div className="hero-controls">
               <div className="hero-lang">
@@ -54,11 +76,11 @@ function App() {
 
           <main className="hero-main">
             <div className="hero-content">
-              <h1 className="hero-title">Seize Opportunities with Index CFDs</h1>
-              <p className="hero-subtitle mt-4">
+              <h1 className="hero-title" ref={textRef}>Seize Opportunities with Index CFDs</h1>
+              <p className="hero-subtitle mt-md-4">
                 Explore and <strong className="text-white">Trade 20</strong> Top Global Indices.
               </p>
-              <button className="hero-button-in mt-4">Start Trading</button>
+              <button className="hero-button-in mt-md-4">Start Trading</button>
             </div>
             <div className="hero-stats-inner">
               {stats.map((stat, index) => (
@@ -74,7 +96,7 @@ function App() {
 
 
           </main>
-        </div>
+        </section>
 
         <section className="indices-section">
           <h2 className="section-heading">Explore our range of Indices</h2>
@@ -126,7 +148,7 @@ function App() {
           </div>
 
         </section>
-        <section className="why-trade-section faq-img"  style={{'--faq-image': `url(${FAQImage})`}}>
+        <section className="why-trade-section faq-img"  style={{'--faq-image': `url(${Icons.FAQImage})`}}>
           <div className="why-trade-container pt-5">
 
             <h2 className="section-heading">Get a 10% Deposit Bonus – Limited Time Only*</h2>
