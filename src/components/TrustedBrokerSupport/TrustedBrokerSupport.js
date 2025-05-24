@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { IoIosArrowDropleft,IoIosArrowDropright,IoIosCheckmarkCircle } from "react-icons/io";
+import { IoIosArrowDropleft, IoIosArrowDropright, IoIosCheckmarkCircle, IoIosStar } from "react-icons/io";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./TrustedBrokerSupport.css";
@@ -18,7 +18,13 @@ const ArrowRight = (props) => (
     <IoIosArrowDropright size={24} color="var(--grey-border)" />
   </div>
 );
-
+const Stars = ({ rating }) => {
+  const icons = [];
+  for (let i = 0; i < rating; i++) {
+    icons.push(<IoIosStar key={i} size={18} className="review-stars" />);
+  }
+  return icons;
+};
 const ReviewSlider = () => {
   const settings = {
     dots: false,
@@ -35,12 +41,13 @@ const ReviewSlider = () => {
     ]
   };
 
+
   return (
     <Slider {...settings}>
       {reviews.map((rev, idx) => (
         <div key={idx} className="review-card">
-          <div className="d-flex align-center gap-2">
-            <div className="review-stars">★★★★★</div>
+          <div className="d-flex align-items-center">
+            <Stars rating={5} />
             <div><IoIosCheckmarkCircle size={18} color="var(--grey-border)" />
               <span className="review-verified">Verified</span>
             </div>
@@ -60,10 +67,10 @@ const TrustedBrokerSection = () => (
     <div className="trusted-broker-content">
       <div className="trustpilot-info">
         <h4>Excellent</h4>
-        <div className="review-stars">★★★★★</div>
+        <Stars rating={5} />
         <p>Based on <u>30,790 reviews</u></p>
-        <div className="d-flex justify-content-center">
-          <div className="review-stars">★</div><b>Trustpilot</b></div>
+        <div className="d-flex justify-content-center align-items-center gap-1">
+          <IoIosStar className="review-stars" size={18} /><b>Trustpilot</b></div>
       </div>
       <div className="review-slider-container">
         <ReviewSlider />

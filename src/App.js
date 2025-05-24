@@ -152,7 +152,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section style={{ padding: '3rem 15rem', justifySelf: 'center', backgroundColor: '#F6F6F6' }} className="why-trade-section-white" >
+        <section style={{ backgroundColor: '#F6F6F6' }} className="why-trade-section-white" >
           <div className="why-trade-container" >
             <h2 className="section-heading">Support You Can Count On — 24/7</h2>
             <p className='feedback-message'>Have questions or want to learn more about our Index CFD offering? Our team is available around the clock—get in touch anytime. We're here to help you trade with confidence</p>
