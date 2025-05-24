@@ -1,7 +1,7 @@
 .indices-section {
     position: relative;
     padding: 60px 20px;
-    background-color: #000;
+    background-color: var(--black);
     overflow: hidden;
     color: var(--white);
     justify-items: center;

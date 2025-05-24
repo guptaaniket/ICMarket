@@ -1,5 +1,5 @@
 .footer {
-    background-color: #000;
+    background-color: var(--black);
     color: var(--white);
     padding: 2rem;
 }
@@ -48,8 +48,8 @@
 }
 
 .footer__icon.tradingview {
-    background-color: white;
-    color: black;
+    background-color: var(--white);
+    color: var(--black);
     font-weight: bold;
 }
 

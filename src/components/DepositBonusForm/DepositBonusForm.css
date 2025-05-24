@@ -70,8 +70,8 @@ h1 {
 }
 
 button[type='submit'] {
-  background-color: #00ff00;
-  color: #000;
+  background-color: var(--green);
+  color: var(--black);
   font-weight: bold;
   border: none;
   padding: 0.75rem;

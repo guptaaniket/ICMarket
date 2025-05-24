@@ -1,17 +1,16 @@
 .why-trade-section {
-  background-color: #000; 
+  background-color: var(--black); 
   color: var(--white);
   padding-bottom: 1rem;
 }
 .gradient-section {
-  /* background-color: #000; Set black background */
   color: var(--white);
   padding-bottom: 1rem;
 }
 
 .why-trade-section-white {
   background-color: var(--white); 
-  color: #000;
+  color: var(--black);
   padding: 3rem 1rem;
 }
 

@@ -181,7 +181,6 @@ body {
   border: none;
   padding: 0.5rem 1.25rem;
   border-radius: var(--radius-pill);
-  /* font-weight: var(--font-weight-semi); */
   cursor: pointer;
   width: 275px;
   height: 71px;
@@ -381,7 +380,6 @@ body {
 
 input::placeholder {
   color: rgba(255, 255, 255, 0.7);
-  /* optional for light/white text */
   background-color: transparent;
 }
 
