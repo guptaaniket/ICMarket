@@ -34,16 +34,16 @@ h1 {
 
 }
 
-.input-type{
+.input-type {
   background-color: rgba(255, 255, 255, 0.09);
-    border-radius: 5px;
+  border-radius: 5px;
   border: 0.8px solid var(--grey-border);
 }
 
 
 .error {
   border: 0.8px solid var(--red);
-  background-color: rgba(255, 111, 111, 0.2157) ;
+  background-color: rgba(255, 111, 111, 0.2157);
 }
 
 .error-message {
@@ -58,7 +58,7 @@ h1 {
   gap: 1rem;
 
 }
- 
+
 
 .phone-wrapper {
   display: flex;
@@ -68,7 +68,7 @@ h1 {
 .code-selector {
   flex: 0 0 100px;
   padding: 0.5rem;
-   border-bottom-right-radius:unset !important;
+  border-bottom-right-radius: unset !important;
   border-top-right-radius: unset !important;
   border-right: unset;
 }
@@ -79,8 +79,18 @@ h1 {
   gap: 0.5rem;
   font-size: 0.875rem;
 }
-.input-phone{
-     border-bottom-left-radius:unset !important;
+
+.checkbox-label p {
+  text-align: left;
+}
+
+.checkbox-label input {
+  width: auto;
+  align-self: start;
+}
+
+.input-phone {
+  border-bottom-left-radius: unset !important;
   border-top-left-radius: unset !important;
 }
 
@@ -124,6 +134,10 @@ button[type='submit']:hover {
   cursor: pointer;
   min-width: 220px;
   align-self: center;
+}
+
+.country-padding {
+  padding: .65rem !important;
 }
 
 @media (max-width: 900px) {

@@ -39,7 +39,7 @@ function App() {
         <section className='header-background-image' style={{ '--bg-image': `url(${Icons.background})` }}>
           <header className="hero-header">
             <div className="hero-logo">
-              <img style={{ width: '228px', height: '29px' }} alt='app-logo' src={Icons.logo} />
+              <img alt='app-logo' src={Icons.logo} />
             </div>
             <div className="hero-controls">
               <div className="hero-lang">
@@ -89,7 +89,7 @@ function App() {
               <div className='company-statements'>
                 <span className='company-vision'>Innovation.<br /> Precision.<br />  Results</span>
                 <div className='company-motive-container'>
-                  <span style={{ lineHeight: '2' }} className='company-motive'>Three powerful account options — designed to deliver for all traders. </span>
+                  <span className='company-motive'>Three powerful account options — designed to deliver for all traders. </span>
                   <p className='company-motive'>Trusted by 200,000+ active traders worldwide, we’re the broker of choice for those who demand advanced trading conditions, award-winning support, and a secure, regulated environment. Our mission is simple: deliver elite trading infrastructure so you can focus on achieving your trading goals.</p>
 
                 </div>
@@ -117,7 +117,7 @@ function App() {
             <p className="section-heading">Harness advanced charting, real-time analytics, and lightning-fast execution across MetaTrader, cTrader, and TradingView. Customize your trading with powerful indicators, EAs, and scripts — and maintain full control with robust risk management tools.</p>
             <div className="logosContainerStyle">
               {platforms.map((platform, idx) => (
-                <img style={{ padding: '0rem 1rem' }} className="logoStyle" key={idx} src={platform.src} alt={platform.alt} />
+                <img className="logoStyle" key={idx} src={platform.src} alt={platform.alt} />
               ))}
             </div>
           </div>
@@ -145,14 +145,14 @@ function App() {
         </section>
         <section className="why-trade-section-white" >
           <div className="feedback-container" >
-            <h2 style={{ textAlign: 'center' }} className="section-heading">A Trusted Broker</h2>
-            <p style={{ textAlign: 'center' }} className='feedback-message'>We’re the broker of choice for over 200,000 active clients.</p>
+            <h2  className="section-heading text-align-center">A Trusted Broker</h2>
+            <p  className='feedback-message text-align-center'>We’re the broker of choice for over 200,000 active clients.</p>
             <div className='feedback'>
               <TrustedBrokerSupport />
             </div>
           </div>
         </section>
-        <section style={{ backgroundColor: '#F6F6F6' }} className="why-trade-section-white" >
+        <section  className="why-trade-section-white support-background-color" >
           <div className="why-trade-container" >
             <h2 className="section-heading">Support You Can Count On — 24/7</h2>
             <p className='feedback-message'>Have questions or want to learn more about our Index CFD offering? Our team is available around the clock—get in touch anytime. We're here to help you trade with confidence</p>

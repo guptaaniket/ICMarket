@@ -86,11 +86,10 @@ const DepositBonusForm = () => {
                     <div className='mt-3'>
                         <span className='label-text'>Country*</span>
                         <select
-                            style={{ padding: '0.65rem' }}
                             name="country"
                             value={formData.country}
                             onChange={handleChange}
-                            className={submitted && !formData.country ? 'error' : 'input-type'}
+                            className={submitted && !formData.country ? 'error country-padding' : 'input-type country-padding'}
                             placeholder="please select"
                         >
                             <option value="">Please Select</option>
@@ -110,12 +109,9 @@ const DepositBonusForm = () => {
                             name="agree"
                             checked={formData.agree}
                             onChange={handleChange}
-                            style={{
-                                width: "auto",
-                                alignSelf: "start"
-                            }}
+                           
                         />
-                        <p style={{ textAlign: 'left' }}>
+                        <p >
                             By completing this form, I confirm that I am opening a live account with IC Markets Global and that I have read and agreed to the<a> Terms and Conditions</a>, Deposit Bonus Terms and Conditions,<a>Privacy Policy</a> , and <a>Cookies Policy</a> .
                         </p>
 

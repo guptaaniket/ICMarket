@@ -96,7 +96,10 @@
     color: #ccc;
     text-align: left;
 }
+.footer__bottom strong{
+    color: var(--white) !important;
 
+}
 .footer__bottom p {
 
     font-size: 14px;

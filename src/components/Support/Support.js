@@ -10,8 +10,8 @@ const TrustedBrokerSupport = () => {
         <div className="support-methods">
           {supportOptions.map((opt, idx) => (
             <div className="support-card" key={idx}>
-              <div style={{justifyItems:''}} className="icon green-icon">{opt.icon}</div>
-              <div style={{textAlign:'left'}}>
+              <div className="icon green-icon">{opt.icon}</div>
+              <div className="text-align-left" >
                 <div className="type green-text">{opt.label}</div>
                 <div className="info">
                   {opt.label === "Email us" ? (
