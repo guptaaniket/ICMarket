@@ -92,7 +92,7 @@ const DepositBonusForm = () => {
                             className={submitted && !formData.country ? 'error country-padding' : 'input-type country-padding'}
                             placeholder="please select"
                         >
-                            <option value="">Please Select</option>
+                            <option value=""></option>
                             <option value="Australia">Australia</option>
                             <option value="USA">USA</option>
                             <option value="India">India</option>
