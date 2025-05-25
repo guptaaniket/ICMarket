@@ -33,83 +33,97 @@ const DepositBonusForm = () => {
         <div className="form-wrapper">
 
             <form className="bonus-form" onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="First and Last Name*"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className={submitted && !formData.name ? 'error' : ''}
-                />
-                {submitted && !formData.name && (
-                    <div className="error-message">This field is required.</div>
-                )}
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Email*"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={submitted && !formData.email ? 'error' : ''}
-                />
-                {submitted && !formData.email && (
-                    <div className="error-message">This field is required.</div>
-                )}
-
-                <div className="phone-country">
-                    <div className="phone-wrapper">
-                        <select className="code-selector">
-                            <option value="+61">+61</option>
-                            <option value="+1">+1</option>
-                            <option value="+91">+91</option>
-                        </select>
-                        <input
-                            type="tel"
-                            name="phone"
-                            placeholder="Phone Number*"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            className={submitted && !formData.phone ? 'error' : ''}
-                        />
-                    </div>
-                    {submitted && !formData.email && (
-                        <div className="error-message">This field is required.</div>
-                    )}
-                    <select
-                        name="country"
-                        value={formData.country}
-                        onChange={handleChange}
-                        className={submitted && !formData.country ? 'error' : ''}
-                    >
-                        <option value="">Please Select</option>
-                        <option value="Australia">Australia</option>
-                        <option value="USA">USA</option>
-                        <option value="India">India</option>
-                    </select>
-                </div>
-                {submitted && !formData.country && (
-                    <div className="error-message">This field is required.</div>
-                )}
-
-                <div className="d-flex flex-row checkbox-label">
+                <div >
+                    <span className='label-text'>First and Last Name*</span>
                     <input
-                        type="checkbox"
-                        name="agree"
-                        checked={formData.agree}
+                        type="text"
+                        name="name"
+                        value={formData.name}
                         onChange={handleChange}
-                        style={{
-                            width: "auto",
-                            alignSelf: "start"
-                        }}
+                        className={submitted && !formData.name ? 'error' : 'input-type'}
                     />
-                    <span style={{ textAlign: 'left' }}>
-                        By completing this form, I confirm that I am opening a live account with IC Markets Global and that I have read and agreed to the<a> Terms and Conditions</a>, Deposit Bonus Terms and Conditions,<a>Privacy Policy</a> , and <a>Cookies Policy</a> .
-                    </span>
-
+                    {submitted && !formData.name && (
+                        <span className="error-message">This field is required.</span>
+                    )}
                 </div>
-                {submitted && !formData.agree && (
-                    <div className="error-message">This field is required.</div>
-                )}
+                <div >
+                    <span className='label-text'>Email*</span>
+                    <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={submitted && !formData.email ? 'error' : 'input-type'}
+                    />
+                    {submitted && !formData.email && (
+                        <span className="error-message">This field is required.</span>
+                    )}
+                </div>
+                <div >
+                    <span className='label-text'>Phone Number*</span>
+                    <div>
+                        <div className="phone-wrapper">
+                            <select
+                                className={submitted && !formData.phone ? 'code-selector error' : 'code-selector input-type'}
+                            >
+                                <option value="+61">+61</option>
+                                <option value="+1">+1</option>
+                                <option value="+91">+91</option>
+                            </select>
+                            <input
+                                type="tel"
+                                name="phone"
+                                placeholder="Phone Number*"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                className={submitted && !formData.phone ? 'error input-phone' : 'input-type input-phone'}
+                            />
+                        </div>
+                        {submitted && !formData.email && (
+                            <span className="error-message">This field is required.</span>
+                        )}
+                    </div>
+                    <div className='mt-3'>
+                        <span className='label-text'>Country*</span>
+                        <select
+                            style={{ padding: '0.65rem' }}
+                            name="country"
+                            value={formData.country}
+                            onChange={handleChange}
+                            className={submitted && !formData.country ? 'error' : 'input-type'}
+                            placeholder="please select"
+                        >
+                            <option value="">Please Select</option>
+                            <option value="Australia">Australia</option>
+                            <option value="USA">USA</option>
+                            <option value="India">India</option>
+                        </select>
+                    </div>
+                    {submitted && !formData.country && (
+                        <span className="error-message">This field is required.</span>
+                    )}
+                </div>
+                <div>
+                    <div className="checkbox-label">
+                        <input
+                            type="checkbox"
+                            name="agree"
+                            checked={formData.agree}
+                            onChange={handleChange}
+                            style={{
+                                width: "auto",
+                                alignSelf: "start"
+                            }}
+                        />
+                        <p style={{ textAlign: 'left' }}>
+                            By completing this form, I confirm that I am opening a live account with IC Markets Global and that I have read and agreed to the<a> Terms and Conditions</a>, Deposit Bonus Terms and Conditions,<a>Privacy Policy</a> , and <a>Cookies Policy</a> .
+                        </p>
+
+                    </div>
+                    {submitted && !formData.agree && (
+                        <span className="error-message">Please accept terms and conditions.</span>
+                    )}
+                </div>
                 <p className="terms-note">*Terms and Conditions apply</p>
 
                 <button className="hero-button-register">Register</button>
