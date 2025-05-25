@@ -1,6 +1,6 @@
 .trusted-broker-wrapper {
   color: var(--black);
-  background-color: var(--var(--white));
+  background-color: var(--white);
   padding: 2rem 1rem;
   /* max-width: 1140px; */
   margin: 0 auto;
